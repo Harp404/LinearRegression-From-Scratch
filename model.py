@@ -10,7 +10,7 @@ y_train = dataset["Scores"]  # Dependent variable (test scores)
 
 
 def cost_function(x_train, y_train, m, c):
-    # Calculate the Root Mean Square Error (RMSE) cost function
+    # Calculate the Mean Square Error (MSE) cost function
     n = len(x_train)  # Number of data points
     cost_sum = 0
     # Calculate squared differences for each data point
@@ -19,7 +19,7 @@ def cost_function(x_train, y_train, m, c):
         cost = (y_train[i] - a) ** 2  # Squared difference between actual and predicted
         cost_sum += cost
 
-    return (cost_sum * (1 / n)) ** (1 / 2)  # Return RMSE
+    return (cost_sum * (1 / n))  # Return MSE
 
 
 def gradient_function(x_train, y_train, m, c):

@@ -10,7 +10,7 @@ This project demonstrates a deep understanding of machine learning fundamentals 
 
 - **🔬 Pure Implementation**: Built without ML libraries (no sklearn)
 - **📈 Gradient Descent**: Custom implementation of the optimization algorithm
-- **📊 Cost Function**: Root mean squared error for training optimization
+- **📊 Cost Function**: mean squared error for training optimization
 - **💾 Smart Model Persistence**: Automatic save/load with error handling
 - **🎮 Interactive Interface**: Beautiful, emoji-enhanced user experience
 - **📱 Real-time Training**: Live progress tracking with formatted output
@@ -92,7 +92,7 @@ python model.py
 
 ### Mathematical Foundation
 
-**Cost Function (RMSE):**
+**Cost Function (MSE):**
 ```
 J(m,c) = √(1/n × Σ(y_i - (mx_i + c))²)
 ```
@@ -130,7 +130,7 @@ LinearRegression-From-Scratch/
 ### Core Functions
 
 1. **`cost_function(x_train, y_train, m, c)`**
-   - Calculates Root Mean Squared Error
+   - Calculates Mean Squared Error
    - Provides smooth gradient landscape
 
 2. **`gradient_function(x_train, y_train, m, c)`**
