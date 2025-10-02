@@ -11,7 +11,8 @@ def cost_function(x_train, y_train, m, c):
     n = len(x_train)
     cost_sum = 0
     for i in range(n):
-        cost = (y_train[i] - (m * x_train[i] + c)) ** 2
+        a=m * x_train[i] + c
+        cost = (y_train[i] - a) ** 2
         cost_sum += cost
 
     return (cost_sum * (1 / n)) ** (1 / 2)
