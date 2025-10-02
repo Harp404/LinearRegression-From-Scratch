@@ -32,7 +32,9 @@ def gradient_function(x_train, y_train, m, c):
     for i in range(n):
         f = m * x_train[i] + c  # Current prediction
 
-        m_gradient += (f - y_train[i]) * x_train[i]  # Partial derivative with respect to m
+        m_gradient += (f - y_train[i]) * x_train[
+            i
+        ]  # Partial derivative with respect to m
         c_gradient += f - y_train[i]  # Partial derivative with respect to c
 
     m_gradient /= n  # Average the gradients
@@ -54,9 +56,11 @@ def gradient_descent(x_train, y_train, lr, it):
         c -= lr * c_gradient  # Update intercept
         # Print progress every 1000 iterations
         if i % 1000 == 0:
-            print(f"Training Progress: Iteration {i} | Cost: {cost_function(x_train, y_train, m, c):.4f}")
+            print(
+                f"Training Progress: Iteration {i} | Cost: {cost_function(x_train, y_train, m, c):.4f}"
+            )
 
-    return m,c
+    return m, c
 
 
 # Hyperparameters
